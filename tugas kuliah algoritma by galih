@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+   int pilihan,pilihan2;
+   float celcius,reamur,fahrenheit,suhu_awal;
+   do
+   {
+   clrscr();
+   printf("PROGRAM KONVERSI SUHU\n");
+   printf("Menejemen Informatika\n");
+   printf("Universitas Teknology Yogyakarta\n");
+   printf("By Galih Aji Priambodo\n");
+   printf("=====================");
+   printf("\n1. Celcius");
+   printf("\n2. Fahrenheit");
+   printf("\n3. Reamur");
+   printf("\nMasukan pilihan satuan awal ");
+   scanf("%d",&pilihan);
+   if (pilihan==1)
+      {
+       printf("\nMasukan suhu dalam satuan Celcius ");
+    scanf("%f",&suhu_awal);
+       fahrenheit=suhu_awal*1.8+32;
+        reamur=suhu_awal*0.8;
+        celcius=suhu_awal;
+      }
+   else if(pilihan==2)
+      {
+        printf("\nMasukan suhu dalam satuan Fahrenheit ");
+    scanf("%f",&suhu_awal);
+       celcius=(suhu_awal-32)/1.8;
+        reamur=(suhu_awal-32)/2.25;
+        fahrenheit=suhu_awal;
+      }
+   else if(pilihan==3)
+      {
+       printf("\nMasukan suhu dalam satuan Reamur ");
+    scanf("%f",&suhu_awal);
+       celcius=suhu_awal/0.8;
+        fahrenheit=suhu_awal*2.25+32;
+        reamur=suhu_awal;
+      }
+   else
+      {
+    printf("Pilihan anda salah, ulangi lagi? ");
+       printf("\n1.YA");
+       printf("\n2.TIDAK");
+       scanf("%d",&pilihan2);
+      }
+   printf("\nHasil konversi");
+   printf("\n==============");
+   printf("\nCelcius    = %f",celcius);
+   printf("\nFahrenheit = %f",fahrenheit);
+   printf("\nReamur     = %f",reamur);
+   printf("\n\nKonversi selesai, ulangi lagi? ");
+   printf("\n1.YA");
+   printf("\n2.TIDAK\n");
+   scanf("%d",&pilihan2);
+   }
+   while (pilihan2==1);
+}
+
